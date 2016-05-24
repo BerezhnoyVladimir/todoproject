@@ -81,8 +81,9 @@
     <table class="tg">
         <tr>
             <th width="80">Todo ID</th>
-            <th width="120">Todo Name</th>
-            <th width="120">Is done</th>
+            <th width="400">Todo title</th>
+            <th width="120">Status</th>
+            <th width="60">Complete</th>
             <th width="60">Edit</th>
             <th width="60">Delete</th>
         </tr>
@@ -90,7 +91,11 @@
             <tr>
                 <td>${todo.id}</td>
                 <td>${todo.title}</td>
-                <td>${todo.isDone}</td>
+                <td><c:if test="${todo.isDone=='true'}">Completed</c:if>
+                    <c:if test="${todo.isDone=='false'}">Incompleted</c:if>
+
+                </td>
+                <td><a href="<c:url value='/complete/${todo.id}' />" >Complete</a></td>
                 <td><a href="<c:url value='/edit/${todo.id}' />" >Edit</a></td>
                 <td><a href="<c:url value='/remove/${todo.id}' />" >Delete</a></td>
             </tr>

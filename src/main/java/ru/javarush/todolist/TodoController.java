@@ -77,6 +77,12 @@ public class TodoController {
         this.todoService.removeTodo(id);
         return "redirect:/todos";
     }
+    @RequestMapping("/complete/{id}")
+    public String completeTodo(@PathVariable("id") int id){
+
+        this.todoService.completeTodo(id);
+        return "redirect:/todos";
+    }
 
     @RequestMapping("/edit/{id}")
     public String editTodo(@PathVariable("id") int id, Model model){
