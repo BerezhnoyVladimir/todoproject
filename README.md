@@ -1,2 +1,2 @@
 # todoproject
-Проект для тестирования hibernate, spring mvc
+Проект для обкатки технологий используемых при создании web приложений. Используются hibernate, spring mvc, mysql, tomcat.
